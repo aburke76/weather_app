@@ -1,3 +1,4 @@
+const { watch } = require("fs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
@@ -7,6 +8,7 @@ module.exports = {
         path: path.resolve(__dirname, "./dist"),
         filename: "main.js",
     },
+    watch: true,
     module: {
         rules: [
             {
