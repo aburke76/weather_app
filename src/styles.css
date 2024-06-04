@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+    --background: #caf0f8;
+    --sky-blue: #90e0ef;
+    --bright-blue: #00b4d8;
+    --royal-blue: #151785;
+    --sunny: #ffb627;
+    --cloudy: #b7b7a4;
+    --stormy: #343a40;
+    --rain: #0077b6;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: var(--background);
+}
+
+h1 {
+    color: var(--royal-blue);
+    font-family: "Mukta";
+}
+
+* {
+    box-sizing: border-box;
+}
