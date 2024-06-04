@@ -25,6 +25,48 @@ h1 {
     font-family: "Mukta";
 }
 
+form {
+    width: 350px;
+}
+
+label {
+    font-family: "Mukta";
+    font-size: 1rem;
+    color: var(--royal-blue);
+    font-weight: 700;
+}
+
+input {
+    padding: 8px;
+    border-radius: 1rem;
+    border: none;
+    font-family: "Mukta";
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+button {
+    outline: none;
+    border: transparent;
+    background-color: #151785;
+    color: white;
+    border-radius: 1rem;
+    padding: 8px;
+    font-weight: 700;
+    width: 75px;
+    font-family: "Mukta";
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.weather-display {
+    height: 350px;
+    width: 350px;
+    border: #151785 3px solid;
+    border-radius: 2rem;
+    margin-top: 1rem;
+}
+
 * {
     box-sizing: border-box;
 }
