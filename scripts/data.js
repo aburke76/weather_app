@@ -10,8 +10,9 @@ async function getData(loc) {
     console.log(data);
     assignValues(
         data.location.name,
+        data.location.region,
         data.current.condition.text,
-        data.current.temp_F,
+        data.current.temp_f,
         data.current.humidity,
         data.current.wind_mph,
         data.current.uv

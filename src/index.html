@@ -6,15 +6,20 @@
         <title>Weather App</title>
     </head>
     <body>
-        <h1>Weather App</h1>
+        <h1 class="header">Weather</h1>
         <form action="" class="form">
             <input
+                required
                 type="text"
                 id="input"
                 name="input"
                 placeholder="Zip Code or City"
             />
-            <button id="search">Search</button>
+            <button type="button" id="search">Search</button>
+            <button type="button" id="temp-change">
+                <span id="F">&deg;F</span>
+                <span class="hidden" id="C">&deg;C</span>
+            </button>
         </form>
         <div id="weather-display"></div>
     </body>

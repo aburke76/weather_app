@@ -1,20 +1,45 @@
 const weatherDisplay = document.querySelector("#weather-display");
+const body = document.querySelector("body");
 
 const city = document.createElement("h2");
 const condition = document.createElement("h3");
-const temp = document.createElement("h4");
+const temp = document.createElement("h1");
 const humidity = document.createElement("h4");
 const wind = document.createElement("h4");
 const uv = document.createElement("h4");
 
-export function assignValues(loc, cond, tem, hum, w, u) {
-    city.textContent = loc;
+export function assignValues(loc, reg, cond, tem, hum, w, u) {
+    city.textContent = `${loc}, ${reg}`;
+    temp.textContent = `${tem}\u00B0F`;
     condition.textContent = cond;
-    temp.textContent = tem;
-    //when I try temp.textContent = `${tem} degrees F`, tem is undefined
-    humidity.textContent = hum;
-    wind.textContent = w;
-    uv.textContent = u;
+    humidity.textContent = `${hum}% Humidity`;
+    wind.textContent = `Wind Speed: ${w}mph`;
+    uv.textContent = `UV Index: ${u}`;
+    weatherDisplay.append(city, temp, condition, humidity, wind, uv);
+    updateBackground();
+}
 
-    weatherDisplay.append(city, condition, temp, humidity, wind, uv);
+function updateBackground() {
+    const cond = condition.textContent;
+    switch (cond) {
+        case "Partly cloudy":
+            body.style.backgroundImage =
+                "url(https://images.unsplash.com/photo-1597621864521-93dfdb10c6b1?q=80&w=1630&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)";
+            break;
+        case "Overcast":
+        case "Cloudy":
+            body.style.backgroundImage =
+                "url(https://images.unsplash.com/photo-1499956827185-0d63ee78a910?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)";
+            break;
+        case "Sunny":
+            body.style.backgroundImage =
+                "url(https://images.unsplash.com/photo-1622278647429-71bc97e904e8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)";
+            break;
+        case "Heavy rain":
+        case "Rain":
+        case "Mist":
+            body.style.backgroundImage =
+                "url(https://images.unsplash.com/photo-1428592953211-077101b2021b?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)";
+            break;
+    }
 }
