@@ -1,6 +1,8 @@
+import { cOrF } from "./conversions";
 import { assignValues } from "./dom";
 
 const input = document.querySelector("input");
+const unit = document.querySelector("#temp-change");
 
 async function getData(loc) {
     const response = await fetch(
@@ -8,6 +10,7 @@ async function getData(loc) {
     );
     const data = await response.json();
     console.log(data);
+
     assignValues(
         data.location.name,
         data.location.region,

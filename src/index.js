@@ -4,11 +4,7 @@ import { userInput } from "../scripts/data";
 const searchBtn = document.querySelector("button");
 const tempBtn = document.querySelector("#temp-change");
 const btnText = document.querySelectorAll("span");
-
-searchBtn.addEventListener("click", (e) => {
-    userInput();
-    e.preventDefault();
-});
+console.log(btnText.classList);
 
 tempBtn.addEventListener("click", () => {
     btnText.forEach((el) => {
@@ -18,4 +14,9 @@ tempBtn.addEventListener("click", () => {
             el.classList.toggle("hidden");
         }
     });
+});
+
+searchBtn.addEventListener("click", (e) => {
+    userInput();
+    e.preventDefault();
 });
