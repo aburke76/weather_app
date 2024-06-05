@@ -18,6 +18,7 @@ body {
     justify-content: center;
     margin: 0;
     background-color: var(--background);
+    font-family: "Mukta";
 }
 
 h1 {
@@ -59,12 +60,12 @@ button {
     cursor: pointer;
 }
 
-.weather-display {
+#weather-display {
     height: 350px;
     width: 350px;
-    border: #151785 3px solid;
-    border-radius: 2rem;
+    border-radius: 1rem;
     margin-top: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 * {
