@@ -1,5 +1,5 @@
 import "./styles.css";
-import { userInput } from "../scripts/getData";
+import { userInput } from "../scripts/data";
 
 const searchBtn = document.querySelector("button");
 
