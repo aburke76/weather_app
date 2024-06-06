@@ -21,6 +21,11 @@ body {
     font-family: "Mukta";
 }
 
+form {
+    display: flex;
+    justify-content: space-between;
+}
+
 label {
     font-family: "Mukta";
     font-size: 1rem;
@@ -35,6 +40,7 @@ input {
     font-family: "Mukta";
     font-size: 1rem;
     font-weight: 700;
+    margin-right: 5px;
 }
 
 button {
@@ -42,13 +48,38 @@ button {
     border: transparent;
     background-color: #151785;
     color: white;
-    border-radius: 1rem;
+    border-radius: 8px;
     padding: 8px;
     font-weight: 700;
     width: 75px;
     font-family: "Mukta";
     font-size: 1rem;
     cursor: pointer;
+}
+
+#search {
+    margin-right: 10px;
+}
+
+.active {
+    background-color: var(--background);
+    color: var(--royal-blue);
+}
+
+.temp-btns {
+    background-color: var(--royal-blue);
+    border-radius: 8px;
+    border: 4px solid var(--royal-blue);
+}
+
+#c {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#f {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 button:hover,
