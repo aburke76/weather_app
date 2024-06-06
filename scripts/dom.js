@@ -10,11 +10,23 @@ temp.setAttribute("id", temp);
 const humidity = document.createElement("h4");
 const wind = document.createElement("h4");
 const uv = document.createElement("h4");
+uv.setAttribute("id", "uv");
 
 export function assignValues(loc, reg, cond, tem, hum, w, u) {
     // const tempUnit = activeTempUnit();
     city.textContent = `${loc}, ${reg}`;
     temp.textContent = `${tem}\u00B0F`;
+    if (tem < 32) {
+        temp.style.color = "#bde0fe ";
+    } else if (tem > 33 && tem < 45) {
+        temp.style.color = "#739BD0";
+    } else if (tem > 45 && tem < 60) {
+        temp.style.color = "#ffd60a";
+    } else if (tem > 60 && tem < 90) {
+        temp.style.color = "#ff7b00";
+    } else {
+        temp.style.color = "#d00000";
+    }
     // if (tempUnit === "f") {
     //     temp.textContent = `${tem}\u00B0F`;
     // } else {
@@ -51,6 +63,7 @@ function updateBackground() {
                 "url(https://images.unsplash.com/photo-1622278647429-71bc97e904e8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)";
             break;
         case "Heavy rain":
+        case "Light rain":
         case "Rain":
         case "Mist":
             body.style.backgroundImage =

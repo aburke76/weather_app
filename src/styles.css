@@ -116,6 +116,10 @@ h2 {
     margin: 1rem 0 1rem;
 }
 
+#uv {
+    margin-bottom: 16px;
+}
+
 * {
     box-sizing: border-box;
 }
