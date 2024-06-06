@@ -6,7 +6,7 @@ const input = document.querySelector("input");
 async function getData(loc) {
     try {
         const response = await fetch(
-            `http://api.weatherapi.com/v1/current.json?key=54c8a42645ed487c993193808242905&q=${loc}&aqi=no`
+            `https://api.weatherapi.com/v1/current.json?key=54c8a42645ed487c993193808242905&q=${loc}&aqi=no`
         );
         const data = await response.json();
         console.log(data);
